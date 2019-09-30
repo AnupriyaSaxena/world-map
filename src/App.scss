@@ -1,0 +1,93 @@
+.container {
+  background: url("../src/assets/images/seaBackground.jpg") top/cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  .logo{
+    background: url("../src/assets/images/logo.png") no-repeat;
+    width: 51rem;
+    height: 18rem;
+    margin-top: 2rem;
+  }
+}
+
+.continents-container{
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  .continent{
+    min-width: 16.66%;
+    margin-bottom: 4rem;
+    cursor: pointer;
+      &-img{
+      height: 40vh;
+      min-width: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;    
+
+      &-africa {
+        background-image: url("../src/assets/images/africa.gif");
+      }
+      &-asia {
+        background-image: url("../src/assets/images/asia.gif");
+      }
+      &-europe {
+        background-image: url("../src/assets/images/europe.gif");
+      }
+      &-northAmerica {
+        background-image: url("../src/assets/images/northamerica.gif");
+      }
+      &-australia {
+        background-image: url("../src/assets/images/australia.gif");
+      }
+      &-southAmerica {
+        background-image: url("../src/assets/images/southamerica.gif");
+      }
+    }
+    &-text{
+      font-family: 'Special Elite',cursive;
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    &:hover {
+      transform: translateY(-.3rem);
+      // box-shadow: 0 1rem 2rem rgba(#000,.2); 
+    }
+    &:active {
+      transform: translateY(-.1rem);
+      // box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    }
+  }
+}
+
+.worldMap-container {
+  display:flex;
+  justify-content: center;
+  margin-top: 4rem;
+
+  .worldMap {
+    height: 50vh;
+    width: 90%;
+    background-image: url("../src/assets/images/worldMap.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;  
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .continents-container{
+    .continent{
+      min-width: 33.33%;
+    }
+  }
+}
